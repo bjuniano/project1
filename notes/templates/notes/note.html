@@ -1,0 +1,31 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .body{
+        background:url(http://i.imgur.com/4ar5A3F.jpg);
+	margin:0 auto 20px auto;
+	width:1200px;
+	height:250px;   
+	font:30px 'Gloria Hallelujah', cursive; 
+	border:0;
+	border-radius:3px;
+	font-smoothing:subpixel-antialiased;
+	max-width:1100px;
+	max-height:250px;
+	color:white;
+	 -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: black;
+   text-align: left;
+        }
+</style>
+        <title>Player Profile</title>
+    </head>
+    <body>
+        <h1>Player name: {{note.title}}</h1>
+        <p>{{note.first_name}}</p>
+        <p>Skill rating: 420/10</p>
+        </body>
+        
+</html>

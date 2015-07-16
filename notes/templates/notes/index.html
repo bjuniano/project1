@@ -1,0 +1,44 @@
+{%load staticfiles%}
+<link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}" />
+<style>
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+    .title{
+    width:1200px;
+	height:300px;   
+        font-size:50px;
+        font:'Gloria', cursive;
+        color: white;
+        text-align: center;
+    margin: 0 auto;
+    }
+    .bottom{
+        color:white;
+    }
+</style>
+<img src="http://i.ytimg.com/vi/HZvoYE7YbDk/maxresdefault.jpg" alt="Faze logo" style="width:200px;height:180px; position: absolute; left: 320px;">
+<div class = "title"> 
+<h1><b>FaZebook</b></h1>
+<p> Home of the most MLG quickscopers</p>
+</div>
+{% if notes %}
+    {% for note in notes %}
+        <a href={%url 'detail' note.id %}>
+            <textarea>
+                {{note.title}}
+                {{note.content}}
+            </textarea>
+        </a>
+    {% endfor %}
+{% else %}
+    <p>No notes are available.</p>
+{% endif %}
+<div class = "bottom">
+<footer>
+  <h2><b>Sponsored by:</b></h2>
+  <img src = "https://silversporknews.files.wordpress.com/2015/02/doritos-nacho-cheese.gif">
+  <img src = "http://img3.wikia.nocookie.net/__cb20140727190433/mountaindew/images/9/91/Mdbottle_zps52ac0b35.png">
+</footer>
+</div>
+<img src="http://25.media.tumblr.com/tumblr_mbaxm9zO4W1qhvucpo1_1349241801_cover.jpg" alt="Mr Spooky" style="width:180px;height:250px; position: absolute; left: 1150px; bottom:80px;">
+<img src="http://vignette1.wikia.nocookie.net/the-frollo-show/images/8/89/941_render_shrek_3.png/revision/latest?cb=20140625091916" alt="Mr Spooky" style="width:180px;height:250px; position: absolute; left: 1150px; top:600px;">
+<img src="http://i.ytimg.com/vi/QEI8KDxLDH0/sddefault.jpg" alt="Faze logo" style="width:180px;height:250px; position: absolute; left: 1150px; top:870px;">
