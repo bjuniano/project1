@@ -1,0 +1,21 @@
+{%extends 'notes/base.html'%}
+{%load staticfiles%}
+
+{%block content%}
+    <link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}" />
+    {% if object_list  %}
+        {% for note in object_list  %}
+            <a href={%url 'note_update' note.id %}>
+                <div class="shrek" >
+                    <div id="base" style="border-color:{{note.folder.color}} transparent transparent transparent;"><div class="rotatevertical">{{note.folder.title}}</div></div>
+                    <br>
+                    <u>{{note.title}}</u>
+                    <br>
+                    {{note.content}}
+                </div>
+            </a>
+        {% endfor %}
+    {% else %}
+        <p>No notes are available.</p>
+    {% endif %}
+{%endblock%}

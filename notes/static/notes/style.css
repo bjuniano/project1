@@ -19,6 +19,30 @@ textarea  {
    text-align: left;
 
 }
+.addnote{
+    position:absolute;
+    left:0px;
+    top:100px;
+   text-align: left;
+   background-color:black;
+   color:white;
+}
+.shrek{
+    background:url(http://i.imgur.com/4ar5A3F.jpg);
+	margin:0 auto 20px auto;
+	width:1200px;
+	height:250px;   
+	font:30px 'Gloria Hallelujah', cursive; 
+	border:0;
+	border-radius:3px;
+	font-smoothing:subpixel-antialiased;
+	max-width:1100px;
+	max-height:250px;
+	color:white;
+	 -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: black;
+   text-align: left;
+}
 textarea:hover {
     -webkit-animation-name: spin;
     -webkit-animation-duration: 8000ms;
